@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c1a452912.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="sass/style.css" />
     <title>Oh My Food</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="header-logo">
-                <img src="./assets/images/logo/ohmyfood@2x.svg" alt="Logo Oh My Food">
+            <div class="header">
+                <img class="header-logo" src="./assets/images/logo/ohmyfood@2x.svg" alt="Logo Oh My Food">
             </div>
         </header>
         <main>
-            <div class="main-nav">
-                <div class="main-nav-localisation">
-                    <p>Paris, Belleville</p>
+
+
+            <section class="main-nav">
+                <div class="main-nav-location">
+                    <i class="fas fa-map-marker-alt"></i><p>Paris, Belleville</p>
                 </div>
                 <div class="main-nav-discover">
                     <h2>Reservez le menu qui vous convient</h2>
@@ -27,20 +30,32 @@
                         <a href="#">Explorez nos restaurants</a>
                     </div>
                 </div>
-                <div class="main-howtodo">
-                    <h3>Fontionnement</h3>
-                    <div class="main-howtodo-flex">
-                        <div class="main-howtodo-item">
-                            <a href="#">
-                                <p> Choisissez un restaurant</p>
-                            </a>
-                        </div>
-                    </div>
+            </section>
+            <section class="main-howtodo-container">
+                <div class="main-howtodo-title">
+                    <h2>Fontionnement</h2>
                 </div>
-            </div>
-            <div class="main-restaurants">
-            
-            </div>
+                <div class="main-howtodo-flex">
+                    <article class="main-howtodo-item">
+                        <div class="main-howtodo-numb">1</div>
+                        <span class="main-howtodo-ico"><i class="fas fa-mobile-alt"></i>
+                        </span>
+                        <h3 class="main-howtodo-item-title">Choisissez un restaurant</h3>
+                    </article>
+                    <article class="main-howtodo-item">
+                        <div class="main-howtodo-numb">2</div>
+                        <span class="main-howtodo-ico"><i class="fas fa-mobile-alt"></i>
+                        </span>
+                        <h3 class="main-howtodo-item-title">Composez votre menu</h3>
+                    </article>
+                    <article class="main-howtodo-item">
+                        <div class="main-howtodo-numb">3</div>
+                        <span class="main-howtodo-ico"><i class="fas fa-mobile-alt"></i>
+                        </span>
+                        <h3 class="main-howtodo-item-title">Dégustez au restaurant</h3>
+                    </article>
+                </div>
+            </section>
         </main>
         <footer>
         </footer>
