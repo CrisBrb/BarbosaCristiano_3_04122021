@@ -5,32 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8c1a452912.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="sass/style.css" />
     <title>Oh My Food</title>
 </head>
 <body>
     <div class="container">
+
         <header>
             <div class="header">
                 <img class="header-logo" src="./assets/images/logo/ohmyfood@2x.svg" alt="Logo Oh My Food">
             </div>
         </header>
-        <main>
 
+        <main>
 
             <section class="main-nav">
                 <div class="main-nav-location">
-                    <i class="fas fa-map-marker-alt"></i><p>Paris, Belleville</p>
+                    <span class="material-icons">place</span>
+                    <!-- <i class="fas fa-map-marker-alt"></i> -->
+                    <p>Paris, Belleville</p>
                 </div>
-                <div class="main-nav-discover">
-                    <h2>Reservez le menu qui vous convient</h2>
-                    <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins.</p>
-                    <div class="btn btn-explore">
-                        <a href="#">Explorez nos restaurants</a>
+                <div class="main-discover-container">
+                    <div class="main-nav-discover">
+                        <h2>Reservez le menu qui vous convient</h2>
+                        <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins.</p>
+                        <div class="btn btn-explore">
+                            <a href="#">Explorez nos restaurants</a>
+                        </div>
                     </div>
                 </div>
             </section>
+
             <section class="main-howtodo-container">
                 <div class="main-howtodo-title">
                     <h2>Fontionnement</h2>
@@ -44,21 +52,42 @@
                     </article>
                     <article class="main-howtodo-item">
                         <div class="main-howtodo-numb">2</div>
-                        <span class="main-howtodo-ico"><i class="fas fa-mobile-alt"></i>
+                        <span class="main-howtodo-ico"><i class="fas fa-list"></i>
                         </span>
                         <h3 class="main-howtodo-item-title">Composez votre menu</h3>
                     </article>
                     <article class="main-howtodo-item">
                         <div class="main-howtodo-numb">3</div>
-                        <span class="main-howtodo-ico"><i class="fas fa-mobile-alt"></i>
+                        <span class="main-howtodo-ico"><i class="fas fa-store"></i>
                         </span>
                         <h3 class="main-howtodo-item-title">Dégustez au restaurant</h3>
                     </article>
                 </div>
             </section>
+
+            <section class="main-restaurants-container">
+                <div class="main-restaurants-title">
+
+                    .
+                    <h2>Restaurants</h2>
+                </div>
+                <div class="main-restaurants-flex">
+                    <a href="/la-note-enchantee.html">
+                        <article class="main-restaurants-item">
+                            <div class="main-restaurants-image"><img src="/assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt=""></div>
+                            <div class="main-restaurants-new"><span>Nouveau</span></div>
+                            <div class="main-restaurants-content">
+                                <div class="main-restaurants-description">
+                                    <h3>La palette du goût</h3>
+                                    <span>Ménilmontant</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </section>
+
         </main>
-        <footer>
-        </footer>
     </div>
 </body>
 </html>
