@@ -269,3 +269,26 @@ a {
 	-webkit-text-fill-color: transparent;
 
 }
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colorfooter);
+  color: white;
+  padding: 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colorfooter);
+  color: white;
+  & a {
+    margin: .4rem;
+  }
+}
+
+.footer-logo{
+  width: 125px;
+  color: white;
+}
