@@ -346,4 +346,19 @@ a {
 .main-restaurants-content .main-restaurants-description h3 {
   margin: 0 0 0.5rem 0;
 }
+
+.main-restaurants-fav:hover .fav-icon-border,
+.main-restaurants-fav .fav-icon-full {
+  display: none;
+}
+
+.main-restaurants-fav:hover .fav-icon-full {
+  display: inline;
+}
+
+.fa-heart-full {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /*# sourceMappingURL=style.css.map */
