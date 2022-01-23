@@ -240,4 +240,34 @@ a {
   border-radius: 30px;
   color: white;
 }
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--colorfooter);
+  color: white;
+  position: relative;
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--colorfooter);
+  color: white;
+}
+
+.footer-logo {
+  width: 125px;
+  color: white;
+}
 /*# sourceMappingURL=la-note-enchantee.css.map */

@@ -206,3 +206,23 @@ a {
       color: white;
     }
   }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorfooter);
+    color: white;
+    position: relative;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorfooter);
+    color: white;
+  }
+  
+  .footer-logo{
+    width: 125px;
+    color: white;
+  }
