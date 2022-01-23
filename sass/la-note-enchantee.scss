@@ -79,3 +79,14 @@ a {
 .header-logo {
   justify-self: center;
 }
+
+.page1-img {
+    height: 300px;
+  
+    & img {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+  }
