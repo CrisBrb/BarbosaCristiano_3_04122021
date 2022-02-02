@@ -31,6 +31,17 @@
   text-align: center;
 }
 
+// @mixin check {
+//     @keyframes check {
+//         0% {
+//             transform: rotate(-270) ;
+//         }
+//         100% {
+//           transform: rotate(0) ;
+//       }
+//     }
+// }
+
 @mixin flex-column-center {
   display: flex;
   flex-direction: column;
@@ -44,6 +55,37 @@
   height: 3px;
   margin: 0.2rem 1rem 0 1rem;
 }
+
+
+@keyframes like {
+	0% { 
+      opacity: 0;
+  }
+
+  50% { 
+      background: linear-gradient(to bottom, #9356DC,#FF79DA);
+      -webkit-background-clip: text;
+    }
+	
+	100% { 
+      background: linear-gradient(to bottom, #9356DC,#FF79DA);
+      -webkit-background-clip: text;
+  	}
+  }
+
+  @keyframes animationtest {
+    from { 
+        transform: translateY(20px);
+        opacity: 0;
+        // margin-top: .5rem;
+    }
+  
+    to { 
+        transform: translateY(0px);
+        opacity: 1;
+        // margin-top: 0;
+      }
+    }
 
 * {
   box-sizing: border-box;
@@ -94,7 +136,6 @@ a {
   .restaurant-container {
     display: flex;
     flex-direction: column;
-    // justify-content: flex-start;
     margin-top: -100px;
     align-items: flex-start;
     width: 100%;
@@ -124,6 +165,7 @@ a {
       font-size: 16px;
       margin: 0 1rem 0 1rem;
     }
+    position: relative;
   }
   
   .restaurant-plats {
@@ -158,17 +200,31 @@ a {
   .restaurant-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     border-radius: 15px;
     min-width: 17rem;
     height: 60px;
     background-color: white;
     margin: 1rem 1rem 1rem 1rem;
-    padding: 0 1rem 0 1rem;
-    gap: 24px;
+    // padding: 0 1rem 0 1rem;
     color: var(--colortext);
-    box-shadow: 0px 4px 10px 2px var(--                             grey);
+    box-shadow: 0px 4px 10px 2px var(--grey);
     font-size: 13px;
+    overflow: hidden;
+      &--1 {
+        animation: animationtest 500ms;
+        transition: ease-in;
+      }
+      &--2 {
+        animation: animationtest 750ms;
+        transition: ease-in;
+      }
+      &--3 {
+        animation: animationtest 1000ms;
+        transition: ease-in;
+      }
+
+
     & h3 {
       font-size: 16px;
       font-weight: 700;
@@ -179,20 +235,22 @@ a {
       margin: 0;
     }
   
-    &:hover {
-      background-color: var(--colorhow-hover);
-      & i {
-        color: var(--colorprimary);
-      }
+    &:hover .box-check {
+        margin-right: 0;
+        animation: 1s;  
     }
-  }
-  
-  .restaurant-price {
-    align-self: flex-end;
-    padding-bottom: 13px;
-    & p {
-      font-size: 15px;
-      font-weight: 700
+
+    .restaurant-description {
+      margin-right: auto;
+      border: 1px solid red;
+    }
+
+    .restaurant-price {
+      padding: 13px 13px 13px 13px;
+      & p {
+        font-size: 15px;
+        font-weight: 700
+      }
     }
   }
   
@@ -226,3 +284,25 @@ a {
     width: 125px;
     color: white;
   }
+
+  .restaurant-item:hover .box-check {
+      display: flex;
+  }
+
+  .box-check {
+    // @include check();
+    border-radius: 0 15px 15px 0;
+    overflow: hidden;
+    transition: margin-right .5s ease-in-out;
+    color: white;
+    background-color: var(--colortertiary);
+    height: 100%;
+    width: 60px;
+    margin-right: -3.8rem;
+    // transition: all 500ms ease-in-out;
+  }
+
+  .fa-check-circle {
+    transform: rotate(-270) ;
+  }
+  
