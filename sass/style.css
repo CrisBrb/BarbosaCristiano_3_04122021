@@ -405,10 +405,11 @@ a {
           flex-direction: column;
   background-color: var(--colorfooter);
   color: white;
-  padding: 1rem;
+  position: relative;
 }
 
-.footer-content {
+.footer-container .footer-content {
+  margin: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,11 +421,20 @@ a {
   color: white;
 }
 
-.footer-content a {
-  margin: .4rem;
+.footer-container .footer-content a {
+  margin-bottom: 10px;
 }
 
-.footer-logo {
+.footer-container .footer-content i {
+  margin-right: 10px;
+}
+
+.footer-container .footer-content .fa-hands-helping {
+  font-size: 10.5px;
+}
+
+.footer-container .footer-logo {
+  margin: 1.5rem 1.5rem 0 1.5rem;
   width: 125px;
   color: white;
 }

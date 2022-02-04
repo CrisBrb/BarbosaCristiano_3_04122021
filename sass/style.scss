@@ -294,20 +294,30 @@ a {
   flex-direction: column;
   background-color: var(--colorfooter);
   color: white;
-  padding: 1rem;
-}
+  position: relative;
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--colorfooter);
-  color: white;
-  & a {
-    margin: .4rem;
+  & .footer-content {
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorfooter);
+    color: white;
+    & a {
+      margin-bottom: 10px;
+    }
+    & i {
+      margin-right: 10px;
+    }
+    & {
+      .fa-hands-helping {
+        font-size: 10.5px;
+      }
+    }
   }
-}
-
-.footer-logo{
-  width: 125px;
-  color: white;
+  
+  & .footer-logo{
+    margin: 1.5rem 1.5rem 0 1.5rem;
+    width: 125px;
+    color: white;
+  }
 }

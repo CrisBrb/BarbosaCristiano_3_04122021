@@ -46,8 +46,8 @@
 
 @-webkit-keyframes animationtest {
   from {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
     opacity: 0;
   }
   to {
@@ -59,14 +59,56 @@
 
 @keyframes animationtest {
   from {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
     opacity: 0;
   }
   to {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page1-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 60%;
+    margin: auto;
+  }
+  .restaurant-title {
+    width: 100%;
+    justify-self: flex-start;
+  }
+  .restaurant-entrees {
+    max-width: 60%;
+  }
+  .restaurant-plats {
+    max-width: 60%;
+  }
+  .restaurant-desserts {
+    max-width: 60%;
   }
 }
 
@@ -135,6 +177,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: -100px;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -250,22 +295,22 @@ a {
 }
 
 .restaurant-item--1 {
-  -webkit-animation: animationtest 500ms;
-          animation: animationtest 500ms;
+  -webkit-animation: animationtest 600ms;
+          animation: animationtest 600ms;
   -webkit-transition: ease-in;
   transition: ease-in;
 }
 
 .restaurant-item--2 {
-  -webkit-animation: animationtest 750ms;
-          animation: animationtest 750ms;
+  -webkit-animation: animationtest 1200ms;
+          animation: animationtest 1200ms;
   -webkit-transition: ease-in;
   transition: ease-in;
 }
 
 .restaurant-item--3 {
-  -webkit-animation: animationtest 1000ms;
-          animation: animationtest 1000ms;
+  -webkit-animation: animationtest 1800ms;
+          animation: animationtest 1800ms;
   -webkit-transition: ease-in;
   transition: ease-in;
 }
@@ -287,18 +332,116 @@ a {
           animation: 1s;
 }
 
+.restaurant-item:hover .fa-check-circle {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .restaurant-item .restaurant-description {
   margin-right: auto;
-  border: 1px solid red;
+  margin-left: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0;
+}
+
+.restaurant-item .restaurant-description h3, .restaurant-item .restaurant-description p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .restaurant-item .restaurant-price {
-  padding: 13px 13px 13px 13px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  padding-bottom: 12.76px;
+  margin-right: 2rem;
+  -webkit-transition: margin-right .5s ease-in-out;
+  transition: margin-right .5s ease-in-out;
 }
 
 .restaurant-item .restaurant-price p {
   font-size: 15px;
   font-weight: 700;
+}
+
+.restaurant-item:hover .restaurant-price {
+  margin-right: 1rem;
+  -webkit-transition: margin-right .5s ease-in-out;
+  transition: margin-right .5s ease-in-out;
+}
+
+.restaurant-item .box-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 15px 15px 0;
+  overflow: hidden;
+  -webkit-transition: margin-right .5s ease-in-out;
+  transition: margin-right .5s ease-in-out;
+  color: white;
+  background-color: var(--colortertiary);
+  height: 100%;
+  width: 60px;
+  margin-right: -3.8rem;
+}
+
+.restaurant-item .fa-check-circle {
+  font-size: 1.5rem;
+  text-align: center;
+  -webkit-transition: -webkit-transform .75s;
+  transition: -webkit-transform .75s;
+  transition: transform .75s;
+  transition: transform .75s, -webkit-transform .75s;
+}
+
+.btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.btn-box .btn {
+  -webkit-box-shadow: 0px 4px 10px 2px var(--grey);
+          box-shadow: 0px 4px 10px 2px var(--grey);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), color-stop(#e86edb), color-stop(#cf64dc), color-stop(#b35cdc), to(#9356dc));
+  background-image: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+  margin: 1rem 5rem 1rem 5rem;
+  padding: 1rem;
+  width: 215px;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+}
+
+.btn-box .btn.btn-explore {
+  padding: 1rem;
+  max-width: 215px;
+  border-radius: 30px;
+  color: white;
 }
 
 .btn {
@@ -315,7 +458,7 @@ a {
 }
 
 .btn.btn-explore {
-  padding: 1rem;
+  margin-bottom: 4rem;
   max-width: 215px;
   border-radius: 30px;
   color: white;
@@ -334,7 +477,8 @@ a {
   position: relative;
 }
 
-.footer-content {
+.footer-container .footer-content {
+  margin: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,31 +490,21 @@ a {
   color: white;
 }
 
-.footer-logo {
+.footer-container .footer-content a {
+  margin-bottom: 10px;
+}
+
+.footer-container .footer-content i {
+  margin-right: 10px;
+}
+
+.footer-container .footer-content .fa-hands-helping {
+  font-size: 10.5px;
+}
+
+.footer-container .footer-logo {
+  margin: 1.5rem 1.5rem 0 1.5rem;
   width: 125px;
   color: white;
-}
-
-.restaurant-item:hover .box-check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.box-check {
-  border-radius: 0 15px 15px 0;
-  overflow: hidden;
-  -webkit-transition: margin-right .5s ease-in-out;
-  transition: margin-right .5s ease-in-out;
-  color: white;
-  background-color: var(--colortertiary);
-  height: 100%;
-  width: 60px;
-  margin-right: -3.8rem;
-}
-
-.fa-check-circle {
-  -webkit-transform: rotate(-270);
-          transform: rotate(-270);
 }
 /*# sourceMappingURL=la-note-enchantee.css.map */
