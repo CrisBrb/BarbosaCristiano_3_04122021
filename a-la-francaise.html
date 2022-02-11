@@ -9,6 +9,7 @@
       rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="sass/a-la-francaise.css" />
+    <link rel="stylesheet" href="sass/animations.css" />
     <title>Oh My Food</title>
 </head>
 <body>
@@ -25,11 +26,17 @@
         </header>
         <main>
             <section class="page1-img">
-                <img src="/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
             </section>
             <section class="restaurant-container">
                 <div class="restaurant-title">
-                    <h1>À la française</h1>
+                    <div>
+                        <h1>À la française</h1>
+                    </div>
+                    <div class="main-restaurants-fav">
+                        <i class="far fa-heart fa-heart-empty"></i>
+                        <i class="fas fa-heart fa-heart-full"></i>
+                    </div>
                 </div>
                 <div class="restaurant-flex">
                     <div class="restaurant-entrees">
@@ -37,8 +44,8 @@
                         <div class="underline"></div>
                         <article class="restaurant-item restaurant-item--1">
                             <div class="restaurant-description">
-                                <h3 class="restaurant-item-title">Ravioles de foie gras</h3>
-                                <p>Accompagnés de leur crème à la truffe</p>
+                                <h3 class="restaurant-item-title">Tartare de poulpe acidulé</h3>
+                                <p>Aux zestes d'orange</p>
                             </div>
                             <div class="restaurant-price">
                                 <p>25€</p>
@@ -49,11 +56,11 @@
                         </article>
                         <article class="restaurant-item restaurant-item--2">
                             <div class="restaurant-description">
-                                <h3 class="restaurant-item-title">Ravioles de foie gras</h3>
-                                <p>Accompagnés de leur crème à la truffe</p>
+                                <h3 class="restaurant-item-title">Velouté de légumes d'antan</h3>
+                                <p>Carotte, panais, topinambour</p>
                             </div>
                             <div class="restaurant-price">
-                                <p>25€</p>
+                                <p>35€</p>
                             </div>
                             <div class="box-check">
                                 <i class="fas fa-check-circle"></i>
@@ -61,11 +68,11 @@
                         </article>
                         <article class="restaurant-item restaurant-item--3">
                             <div class="restaurant-description">
-                                <h3 class="restaurant-item-title">Ravioles de foie gras</h3>
-                                <p>Accompagnés de leur crème à la truffe</p>
+                                <h3 class="restaurant-item-title">Soupe à l'oignon</h3>
+                                <p>Revisitée</p>
                             </div>
                             <div class="restaurant-price">
-                                <p>25€</p>
+                                <p>20€</p>
                             </div>
                             <div class="box-check">
                                 <i class="fas fa-check-circle"></i>
@@ -77,11 +84,11 @@
                         <div class="underline"></div>
                         <article class="restaurant-item restaurant-item--1">
                             <div class="restaurant-description">
-                                <h3 class="restaurant-item-title">Ravioles de foie gras</h3>
-                                <p>Accompagnés de leur crème à la truffe</p>
+                                <h3 class="restaurant-item-title">Coquilles Saint-Jacques</h3>
+                                <p>Accompagnées d'une purée de panais</p>
                             </div>
                             <div class="restaurant-price">
-                                <p>25€</p>
+                                <p>40€</p>
                             </div>
                             <div class="box-check">
                                 <i class="fas fa-check-circle"></i>
@@ -89,11 +96,11 @@
                         </article>
                         <article class="restaurant-item restaurant-item--2">
                             <div class="restaurant-description">
-                                <h3 class="restaurant-item-title">Ravioles de foie gras</h3>
-                                <p>Accompagnés de leur crème à la truffe</p>
+                                <h3 class="restaurant-item-title">Magret de canard</h3>
+                                <p>Et parmentier de pommes de terre</p>
                             </div>
                             <div class="restaurant-price">
-                                <p>25€</p>
+                                <p>35€</p>
                             </div>
                             <div class="box-check">
                                 <i class="fas fa-check-circle"></i>
@@ -101,11 +108,11 @@
                         </article>
                         <article class="restaurant-item restaurant-item--3">
                             <div class="restaurant-description">
-                                <h3 class="restaurant-item-title">Ravioles de foie gras</h3>
-                                <p>Accompagnés de leur crème à la truffe</p>
+                                <h3 class="restaurant-item-title">Pigeonneau d’Ille-et-Vilaine</h3>
+                                <p>Sur son lit de gnocchis aux légumes</p>
                             </div>
                             <div class="restaurant-price">
-                                <p>25€</p>
+                                <p>44€</p>
                             </div>
                             <div class="box-check">
                                 <i class="fas fa-check-circle"></i>
@@ -117,11 +124,11 @@
                         <div class="underline"></div>
                         <article class="restaurant-item restaurant-item--1">
                             <div class="restaurant-description">
-                                <h3 class="restaurant-item-title">Ravioles de foie gras</h3>
-                                <p>Accompagnés de leur crème à la truffe</p>
+                                <h3 class="restaurant-item-title">Pétales de violettes glacés</h3>
+                                <p>Et purée de noisettes</p>
                             </div>
                             <div class="restaurant-price">
-                                <p>25€</p>
+                                <p>18€</p>
                             </div>
                             <div class="box-check">
                                 <i class="fas fa-check-circle"></i>
@@ -129,11 +136,11 @@
                         </article>
                         <article class="restaurant-item restaurant-item--2">
                             <div class="restaurant-description">
-                                <h3 class="restaurant-item-title">Ravioles de foie gras</h3>
-                                <p>Accompagnés de leur crème à la truffe</p>
+                                <h3 class="restaurant-item-title">Fondant au chocolat</h3>
+                                <p>Revisité</p>
                             </div>
                             <div class="restaurant-price">
-                                <p>25€</p>
+                                <p>22€</p>
                             </div>
                             <div class="box-check">
                                 <i class="fas fa-check-circle"></i>
@@ -141,11 +148,11 @@
                         </article>
                         <article class="restaurant-item restaurant-item--3">
                             <div class="restaurant-description">
-                                <h3 class="restaurant-item-title">Ravioles de foie gras</h3>
-                                <p>Accompagnés de leur crème à la truffe</p>
+                                <h3 class="restaurant-item-title">Millefeuille croustillant</h3>
+                                <p>Myrtilles et pâte d’amande</p>
                             </div>
                             <div class="restaurant-price">
-                                <p>25€</p>
+                                <p>23€</p>
                             </div>
                             <div class="box-check">
                                 <i class="fas fa-check-circle"></i>
@@ -154,16 +161,18 @@
                     </div>
                 </div>
                 <div class="btn-box">
-                    <div class="btn btn-explore">
-                        <a href="#">Commander</a>
-                    </div>
+                    <a href="#">
+                        <div class="btn btn-explore">
+                            Commander
+                        </div>
+                    </a>
                 </div>
             </section>
         </main>
         <footer>
             <section class="footer-container">
                 <div class="footer-image">
-                    <img class="footer-logo" src="/assets/images/logo/ohmyfood@2xwhite.svg" alt="Logo OhmyFood">
+                    <img class="footer-logo" src="./assets/images/logo/ohmyfood@2xwhite.svg" alt="Logo OhmyFood">
                 </div>
                 <div class="footer-content">
                     <a href="#"><i class="fas fa-utensils"></i>Proposez un restaurant </a>

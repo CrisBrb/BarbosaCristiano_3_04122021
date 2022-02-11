@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import "mixins.scss";
+@import "medias.scss";
+
 
 :root {
   --colorprimary: #9356dc;
@@ -12,59 +15,6 @@
   --colortext: #353535;
   --colorfooter: #353535;
 }
-
-@mixin btn-style {
-  box-shadow: 0px 4px 10px 2px var(--grey);
-  background-image: linear-gradient(
-    to right bottom,
-    #ff79da,
-    #e86edb,
-    #cf64dc,
-    #b35cdc,
-    #9356dc
-  );
-  margin: 1rem 5rem 1rem 5rem;
-  padding: 1rem;
-  width: 215px;
-  border-radius: 30px;
-  color: white;
-  text-align: center;
-  & a {
-    font-size: 14px;
-  }
-}
-
-@mixin flex-column-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-row-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes like {
-	0% { 
-      opacity: 0;
-  }
-
-  1% { 
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  100% { 
-      background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
 
 * {
   box-sizing: border-box;
@@ -79,20 +29,11 @@ a {
 .header {
   display: flex;
   justify-content: center;
-}
 
-.header-logo {
-  width: 150px;
-  padding: 10px;
-}
-
-.main-nav {
-  display: flex;
-  justify-content: center;
-}
-
-.btn {
-  @include btn-style();
+  & .header-logo {
+    width: 160px;
+    padding: 10px;
+  }
 }
 
 .main-nav {
@@ -101,9 +42,9 @@ a {
   text-align: center;
   & .main-nav-location {
     @include flex-row-center();
-    gap: .5rem;
+    gap: .9rem;
     width: 100%;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     background: var(--grey);
     & span {
@@ -129,8 +70,10 @@ a {
       margin: .75rem 0 .75rem 0;
     }
   }
+  .btn {
+    @include btn-style();
+  }
 }
-
 
 .main-howtodo-container {
   display: flex;
@@ -139,62 +82,72 @@ a {
   align-items: flex-start;
   width: 100%;
   margin: 3rem 0 3rem 0;
-}
 
-.main-howtodo-title{
-  @include flex-column-center();
-  padding: 0 1.0rem 0 1rem;
-  
-  & h2 {
-    font-size: 24px;
-    font-weight: 800;
-    margin: 0rem 0 0 0;
-  }
-}
-
-.main-howtodo-flex {
-  width: 100%;
-}
-
-.main-howtodo-item {
-  display: flex;
-  align-items: center;
-  border-radius: 15px;
-  min-width: 17rem;
-  height: 60px;
-  background-color: var(--lightgrey);
-  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
-  padding: 0 2rem 0 2rem;
-  gap: 24px;
-  color: var(--colortext);
-  box-shadow: 0px 4px 10px 2px var(--grey);
-  font-weight: bold;
-  font-size: 13px;
-  & i {
-    font-size: 16px;
-  }
-  & .main-howtodo-item-title {
-    font-size: 14px;
-    font-weight: 600;
-  }
-  
-  & .main-howtodo-numb{
+  & .main-howtodo-title{
     @include flex-column-center();
-    min-width: 1rem;
-    min-height: 1rem;
-    border-radius: 50%;
-    position: absolute;
-    left: 1rem;
-    text-align: center;
-    color: white;
-    background-color: var(--colorprimary);
-    font-weight: normal;
+    padding: 0 1.0rem 0 1rem;
+    
+    & h2 {
+      font-size: 24px;
+      font-weight: 800;
+      margin: 0rem 0 0 0;
+    }
   }
 
-  &:hover {
-    background-color: var(--colorhow-hover);
-    & i {
-      color: var(--colorprimary);
+  .main-howtodo-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    & .main-howtodo-item {
+      display: flex;
+      align-items: center;
+      border-radius: 15px;
+      min-width: 17rem;
+      height: 60px;
+      background-color: var(--lightgrey);
+      margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+      // padding: 0 2rem 0 2rem;
+      gap: 24px;
+      color: var(--colortext);
+      box-shadow: 0px 4px 10px 2px var(--grey);
+      font-weight: bold;
+      font-size: 13px;
+
+      & i {
+        font-size: 16px;
+      }
+
+      & .main-howtodo-item-title {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    
+      &:hover {
+        background-color: var(--colorhow-hover);
+        & i {
+          color: var(--colorprimary);
+        }
+        transform: scale(1.05);
+        transition: 250ms;
+      }
+    
+      &--1::before {
+        content: "1";
+        @include numb();
+      }
+    
+      &--2::before {
+        content: "2";
+        @include numb();
+      }
+    
+      &--3::before {
+        content: "3";
+        @include numb();
+      }
+      
     }
   }
 }
@@ -202,91 +155,77 @@ a {
 .main-restaurants-container {
   background-color: var(--lightgrey);
   padding: 3rem 1rem 1rem 1rem;
-}
 
-.main-restaurants-title{
-  display: flex;
-  justify-content: flex-start;
-  
-  & h2 {
-    font-weight: bold;
-    margin: 0rem 0 0rem 0;
-  }
-}
-
-.main-restaurants-item {
-  position: relative;
-  margin: 1.5rem 0 1rem 0;
-  border-radius: 15px;
-  box-shadow: 0px 0px 8px 2px var(--grey);
-}
-
-.main-restaurants-image {
-  // border: 1px solid var(--colorsecondary);
-  height: 200px;
-
-  & img {
-    border-radius: 15px 15px 0 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.main-restaurants-new {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2px;
-  width: 90px;
-  height: 30px;
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  background-color: var(--colortertiary);
-  color: var(--darkmint);
-  & span {
-    font-weight: bold;
-  }
-}
-
-.main-restaurants-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  border-radius: 0 0 15px 15px;
-  // border: 1px solid red;
-  padding: 0 1rem 0 1rem;
-  
-
-  & .main-restaurants-description {
-    // border: 1px solid blue;
-    margin: 1rem 0 1rem 0;
-    & h3 {
-    margin: 0 0 0.5rem 0;
+  & .main-restaurants-title{
+    display: flex;
+    justify-content: flex-start;
+    
+    & h2 {
+      font-weight: bold;
+      margin: 0rem 0 0rem 0;
     }
-    border-radius: 0 0 15px 15px;
   }
 
-}
-
-.main-restaurants-fav:hover .fa-heart-empty,
-.main-restaurants-fav .fa-heart-full {
-  display: none;
-  opacity: 0;
+  .main-restaurants-item {
+    position: relative;
+    margin: 1.5rem 0 1rem 0;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px 2px var(--grey);
   
-}
-
-.main-restaurants-fav:hover .fa-heart-full {
-  display: block;
+    & .main-restaurants-image {
+      // border: 1px solid var(--colorsecondary);
+      height: 200px;
+    
+      & img {
+        border-radius: 15px 15px 0 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   
-  opacity: 1;
-}
+    & .main-restaurants-new {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px;
+      width: 90px;
+      height: 30px;
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background-color: var(--colortertiary);
+      color: var(--darkmint);
+      & span {
+        font-weight: bold;
+      }
+    }
+  
+    & .main-restaurants-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 0 0 15px 15px;
+      // border: 1px solid red;
+      padding: 0 1rem 0 1rem;
+      
+    
+      & .main-restaurants-description {
+        // border: 1px solid blue;
+        margin: 1rem 0 1rem 0;
+        & h3 {
+        margin: 0 0 0.5rem 0;
+        }
+        border-radius: 0 0 15px 15px;
+      }
+    }
 
-
-.fa-heart-full {
-  animation: like 2s;
+    &:hover {
+      transform: scale(1.05);
+      transition: 250ms;
+    }
+  }
 }
 
 .footer-container {
@@ -318,6 +257,17 @@ a {
   & .footer-logo{
     margin: 1.5rem 1.5rem 0 1.5rem;
     width: 125px;
-    color: white;
   }
+}
+
+.main-howtodo-numb{
+  display: flex;
+  min-width: 1rem;
+  min-height: 1rem;
+  border-radius: 50%;
+  position: relative;
+  left: 1rem;
+  text-align: center;
+  background-color: var(--colorsecondary);
+  font-weight: normal;
 }
